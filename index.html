@@ -1,39 +1,145 @@
 <!DOCTYPE html>
 
-<!--
-
--->
-
 <html>
     <head>
-        <title>Extreme Players Clan</title>
-        <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet" type="text/css">
+        <title>Bootstrap Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,greek,cyrillic,greek-ext,cyrillic-ext,latin-ext" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css">
         <style>
             body {
-                background-image: url("http://science-all.com/images/wallpapers/cool-backgrounds/cool-backgrounds-19.jpg");
+                background: url("https://fastly.kastatic.org/images/profile/backgrounds/bg-photon-2.jpg");
                 background-attachment: fixed;
                 background-size: cover;
-                display: flex;
-                justify-content: center;
-                align-items: center;
             }
-            .name {
-                color: transparent;
-                background-image: url("http://media02.hongkiat.com/abstract/abstract-background.jpg");
-                -webkit-text-fill-color: transparent;
-                -webkit-background-clip: text;
+            
+            #logo {
+                margin: -5px auto auto auto;
+                width: 80%;
+                padding: 15px;
+                background-image: linear-gradient(rgb(10, 50, 100), Black);
+                border: solid white 3px;
+                border-radius: 0px 0px 20px 20px;
+                color: white;
                 text-align: center;
-                font-family: Sigmar One;
-                font-size: 70px;
-                -webkit-text-stroke: rgba(255, 255, 255, 0.6) 2px;
-                text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 100px black, 0 0 100px black, 0 0 100px black, 0 0 100px black, 0 0 100px black;
+                font-family: Ubuntu;
+                font-size: 60px;
+            }
+            
+            #slogan {
+                color: white;
+                text-align: center;
+                font-family: Sue Ellen Francisco;
+                font-size: 40px;
+            }
+            
+            .btn-primary {
+                width: 15%;
+                border-radius: 0%;
+                font-family: Quicksand;
+                border: solid white 1px;
+            }
+            .btn-primary:hover {
+                border: solid white 1px;
+            }
+            .btn-primary:active {
+                outline: none;
+                border: solid white 1px;
+            }
+            .btn-primary:focus {
+                border: solid white 1px;
+            }
+            
+            .footer-area {
+                background-color: white;
+                width: 100%;
+                height: 180px;
+                padding: 20px;
+                font-family: Quicksand;
+            }
+            .footer-text-header {
+                color: rgb(10, 50, 100);
+                font-size: 20px;
+            }
+            
+            ::-webkit-scrollbar {
+                width: 10px;
+                background-color: white;
+                border: solid rgb(100, 150, 255) 0.5px;
+            }
+            ::-webkit-scrollbar-button {
+                background-color: white;
+            }
+            ::-webkit-scrollbar-thumb {
+                background-color: rgb(100, 150, 255);
+                border: solid white 0.5px;
+            }
+            
+            ::selection {
+                background-color: white;
+                color: black;
             }
         </style>
     </head>
     <body>
-        <div class="name">
-            EP CLAN
+        <div id="logo">
+            ELITE PRØGRAMMING
         </div>
-        <script src="script.js"></script>
+        
+        <br>
+        
+        <div id="slogan">
+            Discover. Create. Advance.
+        </div>
+        
+        <br>
+        
+        <center>    
+            <button class="btn btn-primary">HOME</button><!--
+            --><button class="btn btn-primary">ABOUT</button><!--
+            --><button class="btn btn-primary">BLOG</button><!--
+            --><button class="btn btn-primary">PROJECTS</button><!--
+            --><button class="btn btn-primary">CONTACT</button>
+        </center>
+        
+        <br>
+        
+        <div id="home"></div>
+        <div id="about"></div>
+        <div id="blog"></div>
+        <div id="projects"></div>
+        <div id="contact"></div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <div class="footer-area">
+            <span class="footer-text-header">CONTACT</span>
+        </div>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script>
+            var scene = "home";
+            $(".btn-danger").eq(1).click(function () {
+                scene = "about";
+            });
+            switch (scene) {
+                case "home":
+                    
+                break;
+            }
+            /*
+            switch (scene) {
+                case "home":
+                    document.body.getElementsByClassName("btn-danger")[0].style.borderBottom = "solid white 3px";
+                break;
+                case "about":
+                    document.body.getElementsByClassName("btn-danger")[1].style.borderBottom = "solid white 3px";
+                break;
+            }
+            */
+        </script>
     </body>
 </html>
